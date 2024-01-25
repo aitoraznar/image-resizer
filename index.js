@@ -8,7 +8,7 @@ const outputFolder = './output/';
 fs.readdirSync(inputFolder).forEach(file => {
     const inputFile = inputFolder + file;
     try {
-        console.log('[KOA]', 'Processing image:', inputFile);
+        console.log('[image-resizer]', 'Processing image:', inputFile);
         sharp(inputFile)
             .resize(1400, 1400, {fit: 'inside' })
             .toFile(outputFolder + file)
